@@ -80,4 +80,4 @@ theme: standrews
 deploy: 
   type: git
   repo: git@github.com:Hackl0us/hackl0us.github.io.git
-  branch: gh-pages
+  branch: master
