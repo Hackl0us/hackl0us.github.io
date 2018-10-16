@@ -1,5 +1,7 @@
 body {
-	font-family: 'EB Garamond', serif;
+	/* font-family: 'EB Garamond', serif;
+	font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 	font-size: 1.25rem;
 	color: #333;
 }
