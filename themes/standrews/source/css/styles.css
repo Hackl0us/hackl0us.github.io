@@ -208,3 +208,17 @@ input:focus, textarea:focus {
 footer {
 	border-top: 1px solid #eee;
 }
+
+
+/* Other
+—————————————————————————————————————————————————————————————————————— */
+
+/* 不蒜子 */
+
+#busuanzi_value_site_pv {
+	font-family: 'EB Garamond', serif;
+	font-size: 1rem;
+	color: #333;
+  vertical-align: middle;
+	text-align: center;
+}
