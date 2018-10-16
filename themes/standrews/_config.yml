@@ -1,0 +1,30 @@
+# Header
+menu:
+  Home: /
+  About: /about
+  #Contact: /contact
+
+# Favicon
+favicon_url:
+
+# Default Image for Posts
+default_cover_image: images/default.jpg
+
+# Google Analytics Tracking ID
+google_analytics:
+
+# Social Accounts
+email_url: mailto:ask@hackl0us.com
+weibo_url: https://weibo.com/hackl0us
+twitter_url: https://twitter.com/hackl0us
+instagram_url: https://www.instagram.com/hackl0us
+facebook_url: https://www.facebook.com/profile.php?id=100013044286605
+linkedin_url: 
+dribbble_url:
+github_url: https://github.com/hackl0us
+googleplus_url:
+behance_url:
+fivehundredpx_url:
+
+# Disqus comments
+disqus_shortname: 
