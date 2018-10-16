@@ -1,0 +1,129 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.container {
+  width: 674px;
+  max-width: 674px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    max-width: 674px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: .75rem;
+    box-sizing: border-box;
+  }
+
+  header {
+    font-size: 12px;
+  }
+}
+
+header {
+  text-align: center;
+}
+
+/* card */
+.card {
+  background: #fff;
+  margin: 16px 0;
+  padding: 16px;
+  box-sizing: border-box;
+  border: 2px solid #eee;
+  box-shadow: 0 0 12px #eee;
+  border-radius: 16px;
+}
+
+
+.autobar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* button */
+.button {
+  margin: 0 8px;
+  flex-grow: 1;
+  line-height: 36px;
+  cursor: pointer;
+  border: 1px solid #cce9ff;
+  border-radius: 12px;
+  color: #2e9fff;
+  text-decoration: none;
+  text-align: center;
+  transition: 1s;
+}
+
+.button:hover {
+  background: #eee;
+  transition: 1s;
+}
+
+.button--inline {
+  display: block;
+  text-align: center;
+}
+
+/* textarea */
+textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 2px dotted #eee;
+  box-sizing: border-box;
+  transition: 1s;
+  outline: none;
+  padding: .6em;
+  resize: none;
+}
+
+textarea:focus {
+  border: 2px dotted #111;
+  transition: 1s;
+}
+
+/* radio style */
+.pretty {
+  margin: .6em 1em;
+  width: 10em;
+}
+
+/* tip */
+.tip {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  padding: .6rem 1rem;
+  box-sizing: border-box;
+  line-height: 24px;
+}
+
+.tip p {
+  margin: 0;
+}
+
+/* footer */
+footer {
+  font-size: 14px;
+  padding: 2px;
+  background: #eee;
+  color: #999;
+  text-align: center;
+}
+
+footer a {
+  color: #2e9fff;
+  text-decoration-line: none;
+}
+
+footer a:hover {
+  color: #0087fd;
+}

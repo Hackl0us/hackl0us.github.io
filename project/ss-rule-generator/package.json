@@ -1,0 +1,30 @@
+{
+  "name": "ss-rule-generator",
+  "version": "1.0.0",
+  "description": "ss-rule-generator",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Hackl0us/ss-rule-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Hackl0us/ss-rule-generator/issues"
+  },
+  "homepage": "https://gitlab.com/Hackl0us/ss-rule-generator#README"
+}
