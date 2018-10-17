@@ -129,17 +129,18 @@ SS Rule Generator 一款非常强大的、基于浏览器运行的、不受操�
 <li>自动识别并提取 MitM 的证书配置和域名配置<br><br></li>
 </ul>
 <h3 id="⚠️-注意事项"><a href="#⚠️-注意事项" class="headerlink" title="⚠️ 注意事项"></a>⚠️ 注意事项</h3><ol>
-<li>iOS 的 Safari 请先安装 <a href="https://www.icloud.com/shortcuts/0a8c20edcd5f40b1aa1584bebce42493" target="_blank" rel="noopener">捷径</a> ，然后点击 “整到电脑上” ➡️ 点击 Safari 下方 <strong>分享</strong> 图标 ➡️ 运行捷径并选择对应的代理工具。</li>
+<li>工具默认勾选的项目即为“懒人规则”默认内置规则，对于普通用户，使用默认选项即可。切勿勾选过多规则，尽管工具可以自动去重，但也会让代理工具效率非常低。</li>
+<li>iOS 的 Safari 可以直接拷贝规则到剪切板。若您要将规则在 iOS 系统上下载，由于系统安全限制，文件仅能命名为 <code>Unknown</code>，请将文件导入到文件管理工具（如 <a href="https://itunes.apple.com/cn/app/id364901807" target="_blank" rel="noopener">Documents</a>、<a href="https://itunes.apple.com/cn/app/id1232058109" target="_blank" rel="noopener">Files</a> 等），然后把文件重命名为可被工具识别的状态（如 <code>surge.conf</code>），最后导入到代理工具中。</li>
 <li><p>自定义规则粘贴时，必须带有策略头，但可以忽略策略头的大小写，相同策略头将会被自动合并。例如：</p>
  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Rule]</span> <span class="comment"># 策略头</span></span><br><span class="line">DOMAIN,example.com,DIRECT</span><br><span class="line"></span><br><span class="line"><span class="section">[RULE]</span> <span class="comment"># 可忽略大小写，均可被识别</span></span><br><span class="line">DOMAIN-SUFFIX,example2.com,Proxy</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<ol start="3">
+<ol start="4">
 <li><p>若您以前的规则中存在多个策略组，那么请将其压缩至一个，且命名为<code>Proxy</code>，否则无法使用。过多的策略组难以管理，而且没有必要，显得比较笨拙。例如：</p>
  <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Proxy]</span> <span class="comment"># 不用变动</span></span><br><span class="line"><span class="attr">ss1</span> = ...</span><br><span class="line"><span class="attr">ss2</span> = ...</span><br><span class="line"><span class="attr">ss3</span> = ...</span><br><span class="line">        </span><br><span class="line"><span class="section">[Proxy Group]</span></span><br><span class="line"><span class="attr">Proxy</span> = select, ss1, ss2, ss3 </span><br><span class="line"><span class="comment"># 也可以使用 url-test / fallback 等策略，具体请参考代理工具的配置手册</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<ol start="4">
+<ol start="5">
 <li><p>以下高级功能依赖于 <code>MitM</code>：</p>
 <ul>
 <li>Wikipedia 排版优化</li>
@@ -148,7 +149,7 @@ SS Rule Generator 一款非常强大的、基于浏览器运行的、不受操�
 </li>
 </ul>
 </li>
-<li><p>不同代理工具支持的功能不同，即使您勾选了部分配置，可能不会生效。</p>
+<li><p>不同代理工具支持的功能不同，即使您勾选了部分配置，可能不会生效。（如：目前仅 Surge 支持 “在手机端启用知乎网页版”，其他工具暂时均不支持请求头重写）。</p>
 </li>
 <li><strong>此工具不会记录您填入的任何服务器、自定义规则信息。</strong><br><br></li>
 </ol>
@@ -161,10 +162,12 @@ SS Rule Generator 一款非常强大的、基于浏览器运行的、不受操�
 <h3 id="🔐-授权与协议"><a href="#🔐-授权与协议" class="headerlink" title="🔐 授权与协议"></a>🔐 授权与协议</h3><p>由于部分人不遵守开源协议，将我的实用规则片 fork 后直接删除版权信息，甚至商用。所以此项目暂时闭源，日后是否会开源待定。</p>
 <p>项目不经过我的授权，不允许任何人转载、编辑、拷贝、演绎、分发。为了你我的方便和安全，请不要做任何有风险或违背授权的事情。</p>
 <p>代码已经经过多重加密处理（包括不限于：流程混淆、死代码注入、变量替换、自检与保护、控制台阻断等），请不要花费过多的时间和精力尝试反编译或破解程序，这是不可能的操作。<br><br></p>
-<h3 id="🍯-项目引用"><a href="#🍯-项目引用" class="headerlink" title="🍯 项目引用"></a>🍯 项目引用</h3><ul>
+<h3 id="🍯-引用与鸣谢"><a href="#🍯-引用与鸣谢" class="headerlink" title="🍯 引用与鸣谢"></a>🍯 引用与鸣谢</h3><ul>
 <li><a href="https://github.com/kriskowal/q" target="_blank" rel="noopener">kriskowal / q</a></li>
 <li><a href="https://github.com/SerpSeed/Remove-Duplicate-Lines" target="_blank" rel="noopener">SerpSeed / Remove-Duplicate-Lines</a></li>
-<li><a href="https://github.com/lokesh-coder/pretty-checkbox" target="_blank" rel="noopener">lokesh-coder / pretty-checkbox</a><br><br></li>
+<li><a href="https://github.com/lokesh-coder/pretty-checkbox" target="_blank" rel="noopener">lokesh-coder / pretty-checkbox</a></li>
+<li><a href="https://github.com/eligrey/FileSaver.js" target="_blank" rel="noopener">eligrey / FileSaver.js</a></li>
+<li><a href="https://github.com/lgarron/clipboard-polyfill" target="_blank" rel="noopener">lgarron / clipboard-polyfill</a><br><br></li>
 </ul>
 <h3 id="🍩-结束语"><a href="#🍩-结束语" class="headerlink" title="🍩 结束语"></a>🍩 结束语</h3><p>如果您确认已经仔细阅读以上说明、声明和全部注意事项，并承诺可以遵守相关协议，正确使用工具。您就可以使用 <a href="/project/ss-rule-generator/">🍩 SS Rule Generator</a> 啦~</p>
 
