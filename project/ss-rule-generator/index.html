@@ -311,7 +311,7 @@
             <h2>👏🤖 就是酱紫啦！</h2>
             <textarea cols="70" rows="10" id="end" readonly></textarea>
             <div id=operation style="display: none;" class="autobar">
-                <a class="button" onclick="copy2cb('end')">📋 整到剪切板</a>
+                <a class="button" onclick="copy2cb('#end')">📋 整到剪切板</a>
                 <a class="button" onclick="downloadRule()">🗳 整到电脑上</a>
             </div>
         </div>
@@ -328,10 +328,11 @@
     </footer>
     <script src="js/utils/q.min.js"></script>
     <script src="js/utils/jquery-3.3.1.min.js"></script>
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script src="js/utils/clipboard-polyfill.promise.js"></script>
     <script src="js/resource.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/generator.js"></script>
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 
 </html>
